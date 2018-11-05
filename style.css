@@ -1,0 +1,425 @@
+
+/**********************
+    Fonts
+**********************/
+
+@font-face {
+    font-family: 'Gotham_Light';
+    src: url('font/gotham_light.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gotham_Med';
+    src: url('font/gotham_med.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Gotham_Bold';
+    src: url('font/gotham_bold.ttf') format('truetype');
+}
+
+/**********************
+    General
+**********************/
+
+html {
+    background: #222;
+}
+
+body {
+    font-family: 'Gotham_Light', sans-serif;
+    width: 875px;
+    margin: auto;
+    color: #ccc;
+}
+
+h1 {
+    font-family: 'Gotham_Bold', sans-serif;
+    font-size: 12em;
+    margin: -27.5px auto;
+    padding: 0 auto;
+}
+
+h2 {
+    font-family: 'Gotham_Med', sans-serif;
+    text-align: left;
+    margin-top: 80px;
+}
+
+h3 {
+    margin: 10px auto;
+}
+
+/**********************
+   Calender
+**********************/
+#calender {
+    color: #444;
+    padding: 15px;
+}
+
+#date span {
+    padding-right: 12.8px
+}
+
+#day span{
+    padding-right: 61.5px;
+}
+
+#month span {
+    padding-right: 14.2px;
+}
+
+/**********************
+   Search And Units
+**********************/
+
+#searchAndUnits {
+    width: 100%;
+    display: inline-block;
+    margin-top: 2%;
+    position: relative;
+}
+
+#searchBox {
+    display: inline-block;
+}
+
+.p-units, .p-units span {
+    display: inline-block;
+    padding: 3px;
+}
+
+input {
+    font-family: 'Gotham_Light', sans-serif;
+    position: absolute;
+    top: 5%;
+    right: 0px;
+}
+
+input[type=text] {
+    height: 29px;
+    width: 300px;
+    background: #eee;
+    border: 2px solid #222;
+    border-radius: 20px;
+}
+
+input[type=text]:focus,
+input[type=text]:hover {
+    border-color: #999;
+}
+
+input[placeholder] {
+    padding-left: 15px;
+}
+
+#submit {
+    cursor: pointer;
+    height: 35px;
+    border: 0px solid rgba(0,0,0,0);
+    background: rgba(0,0,0,0);
+    position: absolute;
+    right: 15px;
+}
+
+.units {
+    cursor: pointer;
+}
+
+.units-middle {
+    position: absolute;
+    left: 250px;
+}
+
+.units-pad {
+    margin-right: 20px;
+}
+
+#show-local-weather {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 325px;
+    top: 22px;
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+#show-local-weather:hover {
+    filter: none;
+}
+
+/********** Slider Switch ************/
+
+.switch input { 
+    display: none;
+}
+
+label {
+    display: inline-block;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 25.5px;
+    margin-bottom: -5.5px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #2196F3;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: #fff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #F32121;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(19px);
+    transform: translateX(19px);
+}
+
+.slider.round {
+    border-radius: 25.5px;
+}
+
+.slider.round:before {
+    border-radius: 50%; 
+}
+
+
+/**********************
+    Current Weather
+**********************/
+
+.current-weather {
+    position: relative;
+    margin-top: 3%; 
+}
+
+.show-local-weather {
+    height: 27px;
+    width: 27px;
+    padding-right: 10px; 
+}
+
+#cityCur {
+    font-size: 2.5em;
+    position: absolute; 
+    right: 0;
+    top: 0;
+}
+
+#tempCur {
+    position: absolute;
+    right: 0;
+    top: 50px;
+    font-size: 5em;
+    color: #FDB82E;
+}
+
+#feelsLikeCur {
+    position: absolute;
+    right: 0;
+    top: 140px;
+    font-size: 1.1em;
+}
+
+#windCur {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 170px;
+    font-size: 1.2em;
+}
+
+.windDirC {
+    color: #3BA4E6;
+}
+
+.windSpeedC {
+    color: #E64B3B;
+}
+
+.wi-humidity, .rainCurP {
+    color: lightblue;
+}
+
+#rainCur {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 280px;
+    font-size: 1.2em;
+}
+
+
+#iconCur img {
+    width: 30%;
+}
+
+#weatherCur {
+    display: block;
+    font-size: 2em;
+    text-align: left;
+    margin-left: 15px;
+    margin-bottom: 34px; 
+}
+
+#uvCur {
+    margin-left: 15px;
+    display: block; 
+}
+
+#uvCur i {
+    margin-right: 4px;
+}
+
+.sun {
+    color: #FDB82E;
+}
+
+#sun, #sun i {
+    margin-left: 7.5px;
+    margin-right: 4px;
+}
+
+.moon {
+    color: #05BDEF;
+}
+
+#moon {
+    margin-left: 25px;
+    margin-right: 4px;
+}
+
+#moon i {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+/**********************
+    Hourly  Forecast
+**********************/
+#hourly-forecast {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 20px 0;
+    margin-top: 20px;
+    margin-bottom: -15px;
+}
+
+#hourly-forecast::-webkit-scrollbar {
+  color: #222;
+  background-color: #444;
+  height: 5px;
+} 
+
+#hourly-forecast::-webkit-scrollbar-thumb {
+    background: #2C77A6;
+}
+
+.hourly-forecast {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0px 30px 15px 0;
+}
+
+.inside-hourly {
+    display: block;
+    text-align: center;
+}
+
+/**********************
+    3 Day Forecast
+**********************/
+
+.three-day-forecast {
+    width: 100%;
+    text-align: center;
+    vertical-align: top;
+}
+
+.dailyForecast {
+    display: inline-block;
+    width: 30%;
+    margin: 50px 0;
+    padding: auto 15px;
+    padding: 0;
+    vertical-align: top;
+}
+
+.weekday {
+    font-family: 'Gotham_Med', sans-serif;
+    font-size: 1.5em;
+    display: block;
+    margin-bottom: 15px;
+
+}
+
+.weekdayicon {
+    display: block;
+}
+
+ .weekdayicon img {
+     width: 50%;
+ }
+
+/**********************
+    Footer
+**********************/
+
+.footer  {
+    text-align: center;
+        padding-bottom: 15px;
+}
+
+hr {
+    color: #444;
+    border-color: #444;
+    background: #444; 
+}
+
+#wgLogo {
+    width: 20%;
+    padding-left: 15px;
+    margin-bottom: -3px;
+}
+
+a, a:visited, a:focus {
+    color: #E0592E;
+    text-decoration: none;
+    transition: 0.4s;
+    font-family: 'Gotham_Bold', sans-serif;
+}
+
+a:hover {
+    color: #2196F3;
+}
+
+
+

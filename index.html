@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+        <link rel="stylesheet" href="css/weather-icons.min.css">
+        <link rel="stylesheet" href="css/weather-icons-wind.min.css">
+        <link rel="stylesheet" href="style.css">
+        <title>Show the Local Weather</title>
+    </head>
+    <body id="body">
+        <!-- Units Bar and Search Bar -->
+        <div id="searchAndUnits">
+            <!-- Units -->
+            <label class="switch units">
+                <input id="switch" type="checkbox"/>
+                <div class="slider round"></div>
+            </label>
+            <p class="p-units"><span class="metric units">Metric</span>|<span class="imperial units">Imperial</span></p>
+            <p class="p-units units-middle"><span class="metric units">C</span>|<span class="imperial units units-pad">F</span> 
+                               <span class="metric units">kph</span>|<span class="imperial units units-pad">mph</span> 
+                               <span class="metric units">mm</span>|<span class="imperial units">inch</span>                
+            </p>
+            <!-- Search Bar -->
+            <img src="icons/map-marker.png" id="show-local-weather">
+            <form id="searchBox" class="searchBox" >
+                <input id="search" type="text" placeholder="Paris, France.. Seattle, WA.."/>
+                <input id="submit" value="Search" type="Button" type="Submit" onclick="searchLocation()">
+            </form>
+        <h1>Weather</h1>
+        <!-- Calender - month, dates and days -->
+        <div id="calender">
+            <div id="month"></div>
+            <div id="date"></div>           
+            <div id="day"></div>
+        </div>
+        </div>
+        <!-- Start of Current Weather -->
+        <div class="current-weather">
+            <span id="cityCur"></span>
+            <span id="tempCur"></span>
+            <span id="feelsLikeCur"></span>
+            <span id="windCur"></span>
+            <span id="rainCur"></span>
+            <div>
+            <span id="iconCur"></span>
+            <span id="weatherCur"></span>
+            <span id="uvCur"></span>
+            <span id="sun"></span>
+            <span id="moon"></span>
+            <div>
+        </div>
+        <!-- Start of Hourly Forcast -->
+        <div>
+            <h2>Hourly Forecast</h2>
+            <div id="hourly-forecast">
+            </div>
+        </div>
+        <!-- Start of 3 day Forcast -->
+        <div class="three-day-forecast">
+            <h2>3 Day Forecast</h2>
+            <div id="day1" class="dailyForecast">
+                <span id="weekday1" class="weekday"></span>
+                <span id="weekdayicon1" class="weekdayicon"></span>
+                <span id="weekdaytext1" class="weekdaytext"></span>
+            </div>
+            <div id="day2" class="dailyForecast">
+                <span id="weekday2" class="weekday"></span>
+                <span id="weekdayicon2" class="weekdayicon"></span>
+                <span id="weekdaytext2" class="weekdaytext"></span>
+            </div>
+            <div id="day3" class="dailyForecast">
+                <span id="weekday3" class="weekday"></span>
+                <span id="weekdayicon3" class="weekdayicon"></span>
+                <span id="weekdaytext3" class="weekdaytext"></span>
+            </div>
+        </div>
+        <!-- Start of Footer -->
+        <div class="footer">
+            <hr />
+            <p>Weather data provided by <a href="http://wunderground.com"><img id="wgLogo" src="icons/wundergroundlogo.png"></a></p>
+            <p>Code and Design by <a href="http://seanmurphy.eu">Sean Murphy</a></p>
+        </div>
+        <!-- Scripts -->
+        <script src="script.js"></script>
+    </body>
+</html>
+
+
